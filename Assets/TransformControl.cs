@@ -43,7 +43,7 @@ public class TransformControl : MonoBehaviour
     {
         // How much we've changed
         float delta = value - this.previousValue;
-        this.objectToTrans.transform.Rotate(delta * 180* Vector3.up );
+        this.objectToTrans.transform.Rotate(delta * 120* Vector3.up );
 
         // Set our previous value for the next change
         this.previousValue = value;
@@ -70,13 +70,14 @@ public class TransformControl : MonoBehaviour
     void ZsliderUpdate(float Zvalue)
     {
         transform.localPosition = new Vector3(transform.position.x, transform.position.y, Zvalue*-1);
-        
+        projectview.transform.localScale = new Vector3(Zvalue, Zvalue,1);
+
     }
 
     void YsliderUpdate(float Yvalue)
     {
         transform.localPosition = new Vector3(transform.position.x, Yvalue, transform.position.z);
-        projectview.transform.position = new Vector3(transform.position.x, Yvalue, transform.position.z);
+        
     }
 
 }

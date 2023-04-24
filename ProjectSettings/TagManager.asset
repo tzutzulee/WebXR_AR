@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - Selectable
+  - AR
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - mask
   - Water
   - UI
-  - 
+  - move
   - 
   - 
   - 
